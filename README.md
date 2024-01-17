@@ -1,2 +1,2 @@
-# rockPaperSissors
+# rockPaperScissors
 The Odin Project
