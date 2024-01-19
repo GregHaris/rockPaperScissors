@@ -8,7 +8,7 @@ function getComputerChoice(){
 }
 
 // A function to play a single round that takes two parameters
-function playRound(playerSelection, computerSelection){
+function playRound(playerSelection, computerSelection) {
     // Make playSelection Case-insensitive
     playerSelection = playerSelection.toLowerCase();
 
@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection){
     }
 
     // if playerSelection equals computerSelection its a tie
-    if (playerSelection === computerSelection){
+    if (playerSelection === computerSelection) {
         return "😊 Its a tie! Let's play again";
     }
 
@@ -37,7 +37,36 @@ function playRound(playerSelection, computerSelection){
       }
 }
 
-// test the playRound()
-const playerSelection = prompt("What is the word?", "Enter 'Rock', 'Paper' or 'Scissor'" );
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+
+// A function game() that keeps score and reports a winner or the loser
+function game(){
+  // result storing variables
+  let playerScore = 0;
+  let computerScore = 0;
+
+  // A function that loops through the game 5 times, save the result each time
+  for(let i = 0; i < 5; i++) {
+    const playerSelection = prompt("What is the word?", "Choose 'Rock', 'Paper' or 'Scissor'" );
+    const result = playRound(playerSelection, getComputerChoice());
+
+    // logic to determine the winner
+    if (result.startsWith("You win")) {
+      playerScore++;
+    } else if (result.startsWith("You lose")){
+      computerScore++;
+    }
+    console.log(result);
+  }
+  
+  // logic to announce the game winner
+  if (playerScore > computerScore) {
+    console.log(`You win the game! Final score: ${playerScore} - ${computerScore}`);
+  } else if (computerScore > playerScore) {
+    console.log(`You lose the game! Final score: ${computerScore} - ${playerScore}`);
+  } else {
+    console.log(`It's a tie! Final score: ${playerScore} - ${computerScore}`);
+  }
+}
+
+// calling the game() function to play the game
+game()
