@@ -1,7 +1,7 @@
 
 // A function getComputerChoice to randomly return "Rock", "Paper" or "Scissors"
 
-function getComputerChoice(){
+function getComputerChoice() {
     const options = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
@@ -39,7 +39,7 @@ function playRound(playerSelection, computerSelection) {
 
 
 // A function game() that keeps score and reports a winner or the loser
-function game(){
+function game() {
   // result storing variables
   let playerScore = 0;
   let computerScore = 0;
@@ -52,7 +52,7 @@ function game(){
     // logic to determine the winner
     if (result.startsWith("You win")) {
       playerScore++;
-    } else if (result.startsWith("You lose")){
+    } else if (result.startsWith("You lose")) {
       computerScore++;
     }
     console.log(result);
