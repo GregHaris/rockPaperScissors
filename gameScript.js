@@ -17,12 +17,12 @@ function playRound(playerSelection, computerSelection) {
     // if playerSelection not in "rock", "paper", "scissors", return error 
     if (!["rock", "paper", "scissors"].includes(playerSelection)) {
         return "Invalid input. Word is 'Rock', 'Paper', or 'Scissors'.";
-    }
+    };
 
     // if playerSelection equals computerSelection its a tie
     if (playerSelection === computerSelection) {
         return "😊 Its a tie! Let's play again";
-    }
+    };
 
     // set the winning criteria and declaring the winner
     if (
@@ -72,4 +72,4 @@ function game() {
 }
 
 // calling the game() function to play the game
-game()
+game();
