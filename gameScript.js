@@ -4,7 +4,7 @@ function getComputerChoice() {
     const options = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random() * options.length);
     return options[randomIndex];
-}
+};
 
 // A function to play a single round that takes two parameters
 function playRound(playerSelection, computerSelection) {
@@ -33,8 +33,8 @@ function playRound(playerSelection, computerSelection) {
         return `You win 🎉! ${playerSelection} beats ${computerSelection}`;
       } else {
         return `You lose 🤣! ${computerSelection} beats ${playerSelection}`;
-      }
-}
+      };
+};
 
 
 // A function game() that keeps score and reports a winner or the loser
@@ -57,9 +57,9 @@ function game() {
     // else if result starts with "You lose", computerScore = +1
     } else if (result.startsWith("You lose")) {
       computerScore++;
-    }
+    };
     console.log(result);
-  }
+  };
   
   // logic to announce the game winner
   if (playerScore > computerScore) {
@@ -68,8 +68,8 @@ function game() {
     console.log(`You lose the game! Final score: ${computerScore} - ${playerScore}`);
   } else {
     console.log(`It's a tie! Final score: ${playerScore} - ${computerScore}`);
-  }
-}
+  };
+};
 
 // calling the game() function to play the game
 game();
