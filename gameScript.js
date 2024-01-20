@@ -1,6 +1,5 @@
 
 // A function getComputerChoice to randomly return "Rock", "Paper" or "Scissors"
-
 function getComputerChoice() {
     const options = ["Rock", "Paper", "Scissors"];
     const randomIndex = Math.floor(Math.random() * options.length);
@@ -17,7 +16,7 @@ function playRound(playerSelection, computerSelection) {
 
     // if playerSelection not in "rock", "paper", "scissors", return error 
     if (!["rock", "paper", "scissors"].includes(playerSelection)) {
-        return "Invalid input. word is 'Rock', 'Paper', or 'Scissors'.";
+        return "Invalid input. Word is 'Rock', 'Paper', or 'Scissors'.";
     }
 
     // if playerSelection equals computerSelection its a tie
@@ -46,12 +45,16 @@ function game() {
 
   // A function that loops through the game 5 times, save the result each time
   for(let i = 0; i < 5; i++) {
+    // A variable that prompts the player to choose and stores the player's choice
     const playerSelection = prompt("What is the word?", "Choose 'Rock', 'Paper' or 'Scissor'" );
+    // A variable that calls and takes the playRound function result
     const result = playRound(playerSelection, getComputerChoice());
 
     // logic to determine the winner
+    // if game result starts with "You win", playerScore = +1
     if (result.startsWith("You win")) {
       playerScore++;
+    // else if result starts with "You lose", computerScore = +1
     } else if (result.startsWith("You lose")) {
       computerScore++;
     }
