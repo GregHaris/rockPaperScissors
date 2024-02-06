@@ -1,0 +1,21 @@
+#gameContainer{
+    margin: 50px;
+    padding: 25px;
+}
+
+h1, h3{
+    text-align: center;
+}
+
+#gameBtns{
+    display: flex;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+}
+
+button{
+    height: 80px;
+    width: 80px;
+}
