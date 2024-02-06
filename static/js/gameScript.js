@@ -36,6 +36,15 @@ function playRound(playerSelection, computerSelection) {
       };
 };
 
+// Player decides the number round
+let input = document.querySelector("#gameRound");
+input.addEventListener("keypress", () => {
+    if (event.key === "Enter") {
+        game()
+    };
+gameRound = input.value;
+});
+input.focus()
 
 // A function game() that keeps score and reports a winner or the loser
 function game() {
@@ -53,7 +62,7 @@ function game() {
   computerScore.textContent = computerScoreValue;
 
   // A function that loops through the game 5 times, save the result each time
-  for(let i = 0; i < 2; i++) {
+  for(let i = 0; i < gameRound; i++) {
     // A variable that prompts the player to choose and stores the player's choice
     const playerSelection = prompt("What is the word?", "Choose 'Rock', 'Paper' or 'Scissor'" );
     // A variable that calls and takes the playRound function result
@@ -83,6 +92,5 @@ function game() {
     winner.textContent = `It's a tie! Final score: ${playerScoreValue} - ${computerScoreValue}`;
   };
 };
-
 // calling the game() function to play the game
 game();
