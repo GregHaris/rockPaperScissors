@@ -36,3 +36,53 @@ function playRound(playerSelection, computerSelection) {
       };
 };
 
+
+// A function game() that keeps score and reports a winner or the loser
+function game() {
+  // result storing variables
+
+  let roundResult = document.querySelector(".roundResult");
+
+  let playerScore = document.querySelector(".playerScore");
+  let computerScore = document.querySelector(".computerScore");
+
+  let playerScoreValue = 0;
+  let computerScoreValue = 0;
+
+  playerScore.textContent = playerScoreValue;
+  computerScore.textContent = computerScoreValue;
+
+  // A function that loops through the game 5 times, save the result each time
+  for(let i = 0; i < 2; i++) {
+    // A variable that prompts the player to choose and stores the player's choice
+    const playerSelection = prompt("What is the word?", "Choose 'Rock', 'Paper' or 'Scissor'" );
+    // A variable that calls and takes the playRound function result
+    const result = playRound(playerSelection, getComputerChoice());
+
+    // logic to determine the winner
+    // if game result starts with "You win", playerScore = +1
+    if (result.startsWith("You win")) {
+      playerScoreValue++;
+    // else if result starts with "You lose", computerScore = +1
+    } else if (result.startsWith("You lose")) {
+      computerScoreValue++;
+    };
+    playerScore.textContent = playerScoreValue;
+    computerScore.textContent = computerScoreValue;
+    roundResult.textContent = result;
+  };
+    roundResult.textContent = "";
+  // logic to announce the game winner
+  const winner = document.querySelector(".winner");
+  winner.textContent = "";
+  if (playerScoreValue > computerScoreValue) {
+    winner.textContent = `You win the game! Final score: ${playerScoreValue} - ${computerScoreValue}`;
+  } else if (computerScoreValue > playerScoreValue) {
+    winner.textContent = `You lose the game! Final score: ${computerScoreValue} - ${playerScoreValue}`;
+  } else {
+    winner.textContent = `It's a tie! Final score: ${playerScoreValue} - ${computerScoreValue}`;
+  };
+};
+
+// calling the game() function to play the game
+game();
