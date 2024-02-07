@@ -18,4 +18,17 @@ h1, h3{
 button{
     height: 80px;
     width: 80px;
+    cursor: pointer;
+}
+
+.playBtn{
+    height: fit-content;
+    background-color: rgb(157, 178, 212);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.playBtn:hover{
+    background-color: rgb(134, 184, 220);
 }
