@@ -29,17 +29,3 @@ h1, h3{
     margin-bottom: 30px;
 
 }
-
-.playBtn{
-    width: 70px;
-    background-color: rgb(157, 178, 212);
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    color: aliceblue;
-
-}
-
-.playBtn:hover{
-    background-color: rgb(134, 184, 220);
-}
