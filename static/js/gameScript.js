@@ -11,6 +11,7 @@ const paper_div = document.querySelector("#p");
 const scissors_div = document.querySelector("#s");
 let roundResult = document.querySelector(".roundResult");
 let gameOverMessage_h3 = document.querySelector("#gameOverMessage");
+const resetBtn = document.querySelector("#reset");
 
 // add event listener when user selects the number of rounds to play
 let gameRoundOptions = document.querySelector("#gameRound");
@@ -51,9 +52,8 @@ function game(playerChoice) {
       computerScore_span.textContent = computerScore;       
       roundResult.textContent =  `You lose 🤣! ${computerChoice} beats ${playerChoice}`;
     }
-  }
+  };
 
-  
   roundsPlayed++ // increase roundsPlayed after each round.
 
   if (roundsPlayed === selectedGameRound) {
@@ -79,8 +79,16 @@ function main() {
 
   scissors_div.addEventListener("click", () => {
     game("scissors");
-  })
+  });
 };
+
+// reset 
+resetBtn.addEventListener("click", () => {
+  roundsPlayed = 0; // resets the roundsPlayed to default
+  gameOverMessage_h3.textContent = ""; // clears the game over message
+  roundResult.textContent = ""; // clears the round result message
+});
+
 
 main();
 
