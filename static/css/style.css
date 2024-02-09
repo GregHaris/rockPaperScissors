@@ -16,13 +16,19 @@ h1, h3{
     align-items: center;
     height: 300px;
     flex-wrap: wrap;
-    padding-bottom: 30px;
 }
 
 .choice{
     cursor: pointer;;
 }
 
+#yourMove{
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+
+}
 
 .playBtn{
     width: 70px;
