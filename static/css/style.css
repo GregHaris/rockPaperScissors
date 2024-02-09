@@ -1,32 +1,37 @@
 #gameContainer{
     margin: 50px;
     padding: 25px;
+    display: flex;
+    flex-direction: column;
 }
 
 h1, h3{
     text-align: center;
 }
 
-#gameBtns{
+#choices{
     display: flex;
     gap: 5rem;
     justify-content: center;
     align-items: center;
     height: 300px;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
 }
 
-button{
-    height: 80px;
-    width: 80px;
-    cursor: pointer;
+.choice{
+    cursor: pointer;;
 }
+
 
 .playBtn{
-    height: fit-content;
+    width: 70px;
     background-color: rgb(157, 178, 212);
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    color: aliceblue;
+
 }
 
 .playBtn:hover{
