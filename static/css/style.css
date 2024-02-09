@@ -29,3 +29,20 @@ h1, h3{
     margin-bottom: 30px;
 
 }
+
+#resetBtnContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+#reset{
+    border-radius: 10px;
+    border: hidden;
+    cursor: pointer;
+}
+
+#reset:hover{
+    background-color: aliceblue;
+}
