@@ -9,19 +9,28 @@ const rock_div = document.querySelector("#r");
 const paper_div = document.querySelector("#p");
 const scissors_div = document.querySelector("#s");
 
+function getComputerChoice() {
+  const choices = ["Rock", "Paper", "Scissors"];
+  const randomIndex = Math.floor(Math.random() * choices.length);
+  return choices[randomIndex];
+};
+
+function game(playerChoice) {
+  console.log("🤩🤩💥" + playerChoice)
+}
 
 
 function main() {
   rock_div.addEventListener("click", () => {
-    game("r");
+    game("rock");
   })
 
   paper_div.addEventListener("click", () => {
-    game("p");
+    game("paper");
   })
 
   scissors_div.addEventListener("click", () => {
-    game("s");
+    game("scissors");
   })
 };
 
