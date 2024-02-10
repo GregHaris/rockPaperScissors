@@ -3,8 +3,8 @@ let computerScore = 0;
 let roundsPlayed = 0;
 let selectedGameRound = 0;
 
-const playerScore_span = document.querySelector(".playerScore");
-const computerScore_span = document.querySelector(".computerScore");
+let playerScore_span = document.querySelector(".playerScore");
+let computerScore_span = document.querySelector(".computerScore");
 const scoreBoard_div = document.querySelector("#scoreBoard");
 const rock_div = document.querySelector("#r");
 const paper_div = document.querySelector("#p");
@@ -17,9 +17,7 @@ const resetBtn = document.querySelector("#reset");
 let gameRoundOptions = document.querySelector("#gameRound");
 gameRoundOptions.addEventListener("change", () => {
   selectedGameRound = parseInt(gameRoundOptions.value); // stores the int converted value of the option selected
-  roundsPlayed = 0; // resets the roundsPlayed to default
-  gameOverMessage_h3.textContent = ""; // clears the game over message
-  roundResult.textContent = ""; // clears the round result message
+  resetBtn.click(); // resets the game if game round is selected;
 });
 
 gameRoundOptions.focus();
@@ -84,6 +82,8 @@ function main() {
 
 // reset 
 resetBtn.addEventListener("click", () => {
+  playerScore_span.textContent = 0; // resets player score
+  computerScore_span.textContent = 0; // resets Comp score
   roundsPlayed = 0; // resets the roundsPlayed to default
   gameOverMessage_h3.textContent = ""; // clears the game over message
   roundResult.textContent = ""; // clears the round result message
