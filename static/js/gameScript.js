@@ -82,8 +82,10 @@ function main() {
 
 // reset 
 resetBtn.addEventListener("click", () => {
-  playerScore_span.textContent = 0; // resets player score
-  computerScore_span.textContent = 0; // resets Comp score
+  playerScore = 0; // resets player score
+  playerScore_span.textContent = playerScore; // sets player UI score to the default score;
+  computerScore = 0; // resets Comp score
+  computerScore_span.textContent = computerScore; // sets computer UI score to the default score;
   roundsPlayed = 0; // resets the roundsPlayed to default
   gameOverMessage_h3.textContent = ""; // clears the game over message
   roundResult.textContent = ""; // clears the round result message
