@@ -15,7 +15,6 @@ h1, h3{
     justify-content: center;
     align-items: center;
     height: 300px;
-    flex-wrap: wrap;
 }
 
 .choice{
