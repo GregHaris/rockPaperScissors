@@ -58,7 +58,7 @@ function game(playerChoice) {
     if (playerScore > computerScore) {
       gameOverMessage_h3.textContent = `Game Over! You won the game.`;
     } else if (computerScore > playerScore) {
-      gameOverMessage_h3.textContent =  `Game Over! You won the game.`;
+      gameOverMessage_h3.textContent =  `Game Over! You lost the game.`;
     } else {
       gameOverMessage_h3.textContent = `Game over! It's a tie! `;
     }
