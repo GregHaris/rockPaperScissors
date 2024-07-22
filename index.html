@@ -5,13 +5,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Revision</title>
+    <title>Rock Papper Scissors</title>
     <script src="rockPaperScissors.js" defer></script>
 </head>
+
 <body>
-    <label for="age"> How old are you? 18+ </label>
-    <input class="numberInput" type="text" id="age">
-    <p></p>
+    <div id="gameContainer">
+        <div class="top">
+            <div class="scoreboard">
+                <div class="scores"></div>
+                <div class="finalResult"></div>
+            </div>
+            <div class="gameRoundsContainer">
+                <span>How many rounds can you handle?</span>
+                <select name="round" id="rounds">
+                    <option value="0">Select</option>
+                    <option value="1">One</option>
+                    <option value="2">Two</option>
+                    <option value="3">Three</option>
+                    <option value="4">Four</option>
+                    <option value="5">Five</option>
+                    <option value="6">Six</option>
+                    <option value="7">Seven</option>
+                    <option value="8">Eight</option>
+                    <option value="9">Nine</option>
+                    <option value="10">Ten</option>
+                </select>
+            </div>
+        </div>
+        <div class="playerSelection">
+            <div class="rock"><img src="img/rock.png" alt="Rock"></div>
+            <div class="paper"><img src="img/paper.png" alt="Paper"></div>
+            <div class="scissors"><img src="img/scissors.png" alt="Scissors"></div>
+        </div>
+        <div class="resetBtnContainer"><button class="resetBtn">Reset</button></div>
+    </div>
 </body>
 
 </html>

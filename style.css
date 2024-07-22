@@ -1,4 +1,63 @@
-input {
-    font-size: 2rem;
-    margin: 10px 1px 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#gameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 10px;
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.top {
+  display: flex;
+  height: 50px;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #f5f5f5;
+}
+
+.gameRoundsContainer,
+.resetBtn {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.playerSelection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+  height: 500px;
+  cursor: pointer;
+}
+
+.playerSelection img {
+  flex: 1;
+  width: 400px;
+}
+
+.resetBtnContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.resetBtn {
+  height: 30px;
+  width: 90px;
+  text-align: center;
+  border: none;
+  border-radius: 10px;
+  background-color: #B21807;
+  color: #f5f5f5;
+  cursor: pointer;
+}
