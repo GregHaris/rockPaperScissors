@@ -1,64 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"> 
-    <script src="gameScript.js" defer></script>
-    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+    <title>Revision</title>
+    <script src="rockPaperScissors.js" defer></script>
 </head>
 <body>
-    <div id="gameContainer">
-        <h1>Play Game.</h1>
-        <h3>Rock, paper or Scissors</h3>
-        
-        <div id="scoreBoard">
-            <h2>Scores</h2>
-            <div id="roundResult"><p class="roundResult"> </p></div>
-            <div id="playerScore"> Player: <span class="playerScore"> 0 </span> </div>
-            <div id="computerScore">Computer: <span class="computerScore"> 0 </span></div>
-        </div>
-
-        <div id="choices">
-            <div class="choice" id="r">
-                <img src="img/rock.png" alt="rock">
-            </div>
-            <div class="choice" id="p">
-                <img src="img/paper.png" alt="paper">
-            </div>
-            <div class="choice" id="s">
-                <img src="img/scissors.png" alt="scissors">
-            </div>
-        </div>
-
-        <div id="yourMove">Make your move</div>
-
-        <div id="gameOverMessageContainer">
-            <h3 id="gameOverMessage"></h3>
-        </div>
-
-        <div id="rounds">
-            <label for="gameRound">How Many Rounds?</label>
-            <select name="rounds" id="gameRound">
-                <option value="0">0</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
-            </select>
-        </div>
-        
-        <div id="resetBtnContainer">
-            <button id="reset">Let's play again</button>
-        </div>
-    </div>
-    
-  
+    <label for="age"> How old are you? 18+ </label>
+    <input class="numberInput" type="text" id="age">
+    <p></p>
 </body>
+
 </html>
