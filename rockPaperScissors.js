@@ -14,8 +14,8 @@ const scissors = document.querySelector("#scissors");
 let gameRoundOptions = document.querySelector("#rounds");
 gameRoundOptions.focus();
 gameRoundOptions.addEventListener("change", () => {
+  gameRoundOptions.disabled = true;
   selectedGameRound = parseInt(gameRoundOptions.value);
-  resetBtn.click();
 });
 
 function getComputerChoice() {
@@ -69,28 +69,22 @@ function game(PlayerChoice) {
 }
 
 function main() {
-  rock.addEventListener("click", () => {
-    game("rock");
-  });
+  const buttons = [rock, paper, scissors];
 
-  paper.addEventListener("click", () => {
-    game("paper");
-  });
-
-  scissors.addEventListener("click", () => {
-    game("scissors");
+  buttons.forEach(button => {
+    button.addEventListener('click', () => {
+      if (roundsPlayed === selectedGameRound) {
+        buttons.forEach(btn => btn.disabled = true);
+      } else {
+        game(button.id);
+      }
+    });
   });
 }
 
 const resetBtn = document.querySelector(".resetBtn");
 resetBtn.addEventListener("click", () => {
-  playerScore = 0;
-  computerScore = 0;
-  gameOverMessage.textContent = "";
-  roundsPlayed = 0;
-  roundResult.textContent = "";
-  scores.textContent = "";
-  roundMessage.textContent = "";
+  window.location.reload()
 });
 
 main();
