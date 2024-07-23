@@ -39,6 +39,17 @@
   font-weight: 600;
 }
 
+.gameRoundsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.roundsLeft {
+  font-size: 14px;
+  font-weight: 400;
+}
+
 .playerSelection {
   display: flex;
   justify-content: center;
