@@ -41,7 +41,7 @@ function game(PlayerChoice) {
       computerScore++;
       roundResult.textContent = `You lose! ${computerChoice} beat ${PlayerChoice}`;
     }
-  
+
     scores.textContent = `Your score: ${playerScore} \nComputer score: ${computerScore}`;
   }
 
@@ -49,11 +49,9 @@ function game(PlayerChoice) {
 
   let roundsLeft = selectedGameRound - roundsPlayed;
 
-  if (selectedGameRound === 1) {
-    roundMessage.textContent = `${roundsLeft} of ${selectedGameRound} round to go`;
-  } else {
-    roundMessage.textContent = `${roundsLeft} of ${selectedGameRound} rounds to go`;
-  }
+  roundMessage.textContent = `${roundsLeft} of ${selectedGameRound} ${
+    selectedGameRound === 1 ? "round" : "rounds"
+  } to go`;
 
   if (roundsPlayed === selectedGameRound) {
     roundResult.textContent = "";
@@ -70,10 +68,10 @@ function game(PlayerChoice) {
 function main() {
   const buttons = [rock, paper, scissors];
 
-  buttons.forEach(button => {
-    button.addEventListener('click', () => {
+  buttons.forEach((button) => {
+    button.addEventListener("click", () => {
       if (roundsPlayed === selectedGameRound) {
-        buttons.forEach(btn => btn.disabled = true);
+        buttons.forEach((btn) => (btn.disabled = true));
       } else {
         game(button.id);
       }
@@ -83,7 +81,7 @@ function main() {
 
 const resetBtn = document.querySelector(".resetBtn");
 resetBtn.addEventListener("click", () => {
-  window.location.reload()
+  window.location.reload();
 });
 
 main();
