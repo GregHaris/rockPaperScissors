@@ -29,8 +29,7 @@ function game(PlayerChoice) {
 
   if (roundsPlayed < selectedGameRound) {
     if (PlayerChoice === computerChoice) {
-      roundResult.textContent = "Its a tie!";
-      scores.textContent = `Your score: ${playerScore} \nComputer score: ${computerScore}`;
+      roundResult.textContent = "It's a tie!";
     } else if (
       (PlayerChoice === "rock" && computerChoice === "scissors") ||
       (PlayerChoice === "paper" && computerChoice === "rock") ||
@@ -38,12 +37,12 @@ function game(PlayerChoice) {
     ) {
       playerScore++;
       roundResult.textContent = `You win! ${PlayerChoice} beat ${computerChoice}`;
-      scores.textContent = `Your score: ${playerScore} \nComputer score: ${computerScore}`;
     } else {
       computerScore++;
       roundResult.textContent = `You lose! ${computerChoice} beat ${PlayerChoice}`;
-      scores.textContent = `Your score: ${playerScore} \nComputer score: ${computerScore}`;
     }
+  
+    scores.textContent = `Your score: ${playerScore} \nComputer score: ${computerScore}`;
   }
 
   roundsPlayed++;
